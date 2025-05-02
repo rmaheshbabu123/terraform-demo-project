@@ -5,6 +5,7 @@ resource "aws_eks_cluster" "eks" {
 
   vpc_config {
     subnet_ids = [var.public_subnet_az1_id, var.public_subnet_az2_id]
+    endpoint_public_access = true
   }
 
   tags = {
